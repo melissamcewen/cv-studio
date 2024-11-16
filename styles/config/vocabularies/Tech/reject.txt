@@ -1,0 +1,6 @@
+[^.]jsx
+Codepen
+VScode
+VSCode
+VsCode
+Swift UI

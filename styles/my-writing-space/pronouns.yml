@@ -1,0 +1,22 @@
+extends: existence
+message: "'%s' is a prounoun, be careful"
+ignorecase: true
+level: warning
+tokens:
+  - he
+  - she
+  - it
+  - they
+  - we
+  - us
+  - you
+  - him
+  - her
+  - them
+  - its
+  - that
+  - this
+  - those
+  - these
+  - their
+

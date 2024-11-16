@@ -1,3 +1,11 @@
+# priv
+
+output
+prompts
+jobs
+resume-cv.yml
+resumes
+
 # Logs
 logs
 *.log

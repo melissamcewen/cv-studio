@@ -1,0 +1,23 @@
+extends: existence
+message: "'%s' is a filler word"
+ignorecase: true
+level: warning
+tokens:
+  - just
+  - that
+  - very
+  - really
+  - literally
+  - totally
+  - due to the fact
+  - in order to
+  - quite
+  - perhaps
+  - actually
+  - almost
+  - slightly
+  - simply
+  - absolutely
+  - there was
+  - have got
+

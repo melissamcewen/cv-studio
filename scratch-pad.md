@@ -1,0 +1,4 @@
+# Scratchpad
+
+## Company Name
+
