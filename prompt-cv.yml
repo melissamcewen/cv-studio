@@ -10,9 +10,7 @@ cv:
       username: github username
   sections:
     summary:
-    # If the target role differs from my most recent experience, craft a narrative explaining my interest in that role while showcasing recent skills and accomplishments.
-    # For example, if the most position was "manager" and I am applying for a "senior software engineer" role, the summary should explain why I want to transition back into hands-on technical work, mention how many years (if any) experience I have in the target role, and highlight any relevant skills or accomplishments.
-    # the summary should be 3-5 sentences long
+    # Create a summary for the resume. The summary should tell an accurate, concise story based on the input resume.yml on how I meet the job description's most important qualifications in 2-3 sentences using specific and practical information.
       - "summary goes here"
     experience:
     # experience is a list of jobs for the resume. Do not remove any jobs from the list. For example let's say there is a job like
@@ -32,12 +30,8 @@ cv:
     #    end_date: 2011-08
     # DO NOT reorder items in this section
       - company: Company Name
-      # a comma separated list of potential positions for the position field. In the final output pick the one most relevant to the position
-      # for example position: Application Website Developer, Front-end Web Developer
-      # if the position being applied to is front end focused simply put
-      # position: Front-end Web Developer
-      # If it's a job asking for more general development skills use
-      # position: Application Website Developer
+      # Titles can amended to tell the story. For example, if a formal title of an experience was Senior Engineer, but in practice, the highlights indicate they were in a leadership position, when applying to a leadership position the title could be amended to “Team Lead, Senior Engineer” and that position could be counted as management experience.
+      # If a synonym to the title is a more direct match to the job description, use the synonym. For example, if the job description is looking for a “Software Engineer” and the title is “Developer”, use “Software Engineer” as the title.
         position: Title
         location: location
         start_date: YYYY-MM
@@ -45,10 +39,7 @@ cv:
         end_date: YYYY-MM
         # do not include skills or context sections
         highlights:
-        # Resume bullet points. Tailor them to the job being applied for.
-        # If there is nothing relevant to the job being applied for, you can omit highlights for that job
-        # Bullets should start with an action verb, say what was accomplished, how the accomplishment was measured (numbers if included), and how it was acheived. Add as many as needed.
-        # be specific and use numbers when possible, but don't make up numbers if they don't exist in the input resume.yml
+        # Resume bullet points. Each one should be rewritten to optimize for the job description and readability while remaining accurate. Only include bullet points that are relevant to the job description. Focus on impact and concrete examples. Use numbers to quantify impact when possible. Use active language that demonstrates the skills and experience that are relevant to the job description. Mention specific programming languages and technologies that the job description is looking for when possible.
           - "resume bullet point"
           - "resume bullet point"
     education:
@@ -57,25 +48,23 @@ cv:
         degree: degree
         start_date: YYYY-MM
         end_date: YYYY-MM
-    # don't include this section if you don't think it's important for the job
     volunteering:
-    # list out any relevant volunteer work
+    # list out any relevant volunteer work. Don't include this section if there is no volunteer work that is relevant to the job.
       - name: "[Name of organization](URL)"
         highlights:
           - "Bullet list emphasizing any relevant experience"
           - "Bullet list emphasizing any relevant experience"
-    # don't include this section if you don't think it's important for the job
+
     projects:
-    # list out any relevant projects and writing
+    # list out any relevant projects and writing. Don't include projects that are not relevant to the job.
       - name: '[Title](URL): context such as what it is about, who it was for'
       - name: '[Title](URL): context such as what it is about, who it was for'
     skills:
-    # customize this section based on the skills listed in the roles in the input resume.yml experience sections and tailor it for the target role. You can have as many categories as needed.
-    # Please ensure the skills section ONLY includes technologies and tools explicitly mentioned in my original resume.yml. Do not add any skills not present in the input resume.yml.
-    # For example if the job description mentions "Redux" AND the original resume.yml does not include "Redux" or synonyms of "Redux", do not include it
-    # For example if the job description mentions "Redux" AND the original resume.yml does include "Redux" or synonyms of "Redux", do include it
-      - label: category of skills
-        details: comma separated list of skills
-      - label: category of skills
-        details: comma separated list of skills
+    # Fill out the list of programming languages I know.
+    # Is the job description looking for a specific programming language? Is the language on my skill list? If so, list it first. If no specific languages are mentioned in the job description, list the three most relevant languages from my skill list.
+      - label: Languages
+        details: "comma separated list of programming languages"
+    # Are any technologies mentioned in the job description? Are they on my skill list? If so, list the technologies under details here. If no technologies are mentioned in the job description, list up to 10 relevant technologies. Do not include technologies that are not relevant to the job.
+      - label: Technologies
+        details: "comma separated list of skills in the technologies category"
 
