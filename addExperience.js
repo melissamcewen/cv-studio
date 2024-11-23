@@ -27,41 +27,39 @@ function cleanPositionsForExistingExperience(experience) {
       // Split the position by commas and take only the first item
       exp.position = exp.position.split(',')[0].trim();
     }
-    // If position doesn't contain a comma, leave it as is
-    return exp;
+    return exp; // Leave position as is if no comma is found
   });
 }
 
-// Function to add missing experiences from comparison to input
+// Function to add missing experiences based only on start_date
 function addMissingExperiences(input, comparison) {
   const inputExperience = input.cv.sections.experience || [];
   const comparisonExperience = comparison.cv.sections.experience || [];
 
   comparisonExperience.forEach(compExperience => {
-    // Clean the position of any multi-role entries for comparison experience
-    if (compExperience.position && compExperience.position.includes(',')) {
-      compExperience.position = compExperience.position.split(',')[0].trim(); // Split by comma and use the first part
-    }
-
-    // Check if the experience from comparison already exists in input
+    // Check if the experience with the same start_date already exists in input
     const exists = inputExperience.some(inputExp =>
-      inputExp.company === compExperience.company &&
-      inputExp.position === compExperience.position &&
-      inputExp.start_date === compExperience.start_date &&
-      inputExp.location === compExperience.location
+      inputExp.start_date === compExperience.start_date
     );
 
     if (!exists) {
       // If the experience is missing, add it to the input list
       inputExperience.push({
-        company: compExperience.company,
-        position: compExperience.position,
-        location: compExperience.location,
+        company: compExperience.company || '',
+        position: compExperience.position || '',
+        location: compExperience.location || '',
         start_date: compExperience.start_date,
         end_date: compExperience.end_date || 'present', // Default to 'present' if not specified
       });
-      console.log(`Added new experience: ${compExperience.company} - ${compExperience.position}`);
+      console.log(`Added new experience: ${compExperience.company || 'Unknown Company'} - ${compExperience.position || 'Unknown Position'}`);
     }
+  });
+
+  // Sort experiences by start_date in descending order (newest first)
+  inputExperience.sort((a, b) => {
+    const dateA = new Date(a.start_date);
+    const dateB = new Date(b.start_date);
+    return dateB - dateA; // Descending order
   });
 
   return inputExperience;
@@ -73,10 +71,10 @@ function processYAML(inputFile, comparisonFile, outputFile) {
   const input = loadYAML(inputFile);
   const comparison = loadYAML(comparisonFile);
 
-  // Clean positions in the input experience (for existing entries, only if there are multiple roles)
+  // Clean positions in the input experience
   input.cv.sections.experience = cleanPositionsForExistingExperience(input.cv.sections.experience || []);
 
-  // Add missing experiences from comparison to input (and also clean their positions if necessary)
+  // Add missing experiences from comparison to input and sort by start_date (newest first)
   input.cv.sections.experience = addMissingExperiences(input, comparison);
 
   // Save the updated input to a new YAML file

@@ -9,16 +9,30 @@ cv:
     - network: GitHub
       username: github username
   sections:
-    # If the position I'm applying for is different from the position I currently hold, create a summary that emphasizes my previous relevant positions. For example, if my last position was manager and I am applying for a senior software engineer role:
-    # "I am looking to transition back to being an individual contributor senior software engineer, following several years of leading teams and heading up engineering at a startup. Though I enjoyed leading and growing teams I missed being hands-on the day-to-day. On top of my freshly sharpened coding skills, I bring strong mentorship skills, and a track record of delivering strong business results to the table."
     summary:
-      - "short 1-2 sentence summmary tailored for the job"
-    # experience is a list of jobs for the resume. Do not remove any jobs from the list.
-    # DO NOT reorder items in this section
+    # If the target role differs from my most recent experience, craft a narrative explaining my interest in that role while showcasing recent skills and accomplishments.
+    # For example, if the most position was "manager" and I am applying for a "senior software engineer" role, the summary should explain why I want to transition back into hands-on technical work, mention how many years (if any) experience I have in the target role, and highlight any relevant skills or accomplishments.
+    # the summary should be 3-5 sentences long
+      - "summary goes here"
     experience:
+    # experience is a list of jobs for the resume. Do not remove any jobs from the list. For example let's say there is a job like
+    #  - company: JobCorp
+    #    position: Junior Application Developer
+    #    location: New York, NY
+    #    start_date: 2010-08
+    #    end_date: 2011-08
+    #    key: columbia
+    #    highlights:
+    #      - "something irrelevant to the job being applied for"
+    # Then the output for that job should exclude highlights and be the job company, position, location, start_date, end_date
+    #  - company: JobCorp
+    #    position: Junior Application Developer
+    #    location: New York, NY
+    #    start_date: 2010-08
+    #    end_date: 2011-08
+    # DO NOT reorder items in this section
       - company: Company Name
-      # a comma seperated list of potential positions is provided for the position field, pick the one most relevant to the position
-      # there should only be ONE position in the final list
+      # a comma separated list of potential positions for the position field. In the final output pick the one most relevant to the position
       # for example position: Application Website Developer, Front-end Web Developer
       # if the position being applied to is front end focused simply put
       # position: Front-end Web Developer
@@ -33,7 +47,8 @@ cv:
         highlights:
         # Resume bullet points. Tailor them to the job being applied for.
         # If there is nothing relevant to the job being applied for, you can omit highlights for that job
-        # Bullets should start with an action verb, say what was accomplished, how the accomplishment was measured, and how it was acheived. Add as many as needed.
+        # Bullets should start with an action verb, say what was accomplished, how the accomplishment was measured (numbers if included), and how it was acheived. Add as many as needed.
+        # be specific and use numbers when possible, but don't make up numbers if they don't exist in the input resume.yml
           - "resume bullet point"
           - "resume bullet point"
     education:
@@ -56,11 +71,11 @@ cv:
       - name: '[Title](URL): context such as what it is about, who it was for'
     skills:
     # customize this section based on the skills listed in the roles in the input resume.yml experience sections and tailor it for the target role. You can have as many categories as needed.
-    # Please ensure that the skills section only includes technologies and tools explicitly mentioned in my original resume.yml. Do not add any skills that are not present in the input resume.yml.
-    # For example if the job description mentions "Redux" AND the original resume.yml does not include "Redux" or synonyms of  "Redux", do not include it
-    # For example if the job description mentions "Redux" AND the original resume.yml does include "Redux" or synonums of "Redux", do include it
+    # Please ensure the skills section ONLY includes technologies and tools explicitly mentioned in my original resume.yml. Do not add any skills not present in the input resume.yml.
+    # For example if the job description mentions "Redux" AND the original resume.yml does not include "Redux" or synonyms of "Redux", do not include it
+    # For example if the job description mentions "Redux" AND the original resume.yml does include "Redux" or synonyms of "Redux", do include it
       - label: category of skills
-        details: comma seperated list of skills
+        details: comma separated list of skills
       - label: category of skills
-        details: comma seperated list of skills
+        details: comma separated list of skills
 

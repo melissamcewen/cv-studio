@@ -22,3 +22,9 @@ NPM
 Snowpack
 Skypack
 Tricentis
+virtualizations
+APIs
+telecom
+Tensorflow
+Slackbot
+Asana

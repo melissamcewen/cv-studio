@@ -5,7 +5,8 @@ prompts
 jobs
 resume-cv.yml
 resumes
-
+CVs
+styles/config/vocabularies/personal
 # Logs
 logs
 *.log
