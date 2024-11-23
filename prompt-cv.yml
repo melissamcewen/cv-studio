@@ -10,38 +10,21 @@ cv:
       username: github username
   sections:
     summary:
-    # Create a summary for the resume. The summary should tell an accurate, concise story based on the input resume.yml on how I meet the job description's most important qualifications in 2-3 sentences using specific and practical information.
+      # Craft a concise 2-3 sentence summary that directly aligns with the job description, emphasizing the candidate's most relevant skills and achievements.
+      # Prioritize key strengths and measurable outcomes. Include relevant job description keywords.
       - "summary goes here"
     experience:
-    # experience is a list of jobs for the resume. Do not remove any jobs from the list. For example let's say there is a job like
-    #  - company: JobCorp
-    #    position: Junior Application Developer
-    #    location: New York, NY
-    #    start_date: 2010-08
-    #    end_date: 2011-08
-    #    key: columbia
-    #    highlights:
-    #      - "something irrelevant to the job being applied for"
-    # Then the output for that job should exclude highlights and be the job company, position, location, start_date, end_date
-    #  - company: JobCorp
-    #    position: Junior Application Developer
-    #    location: New York, NY
-    #    start_date: 2010-08
-    #    end_date: 2011-08
-    # DO NOT reorder items in this section
+      # Include all job experiences listed, but omit the highlights for any positions that are not directly relevant to the job description.
+      # For positions that are relevant, include the job title, company, location, dates, and highlights that demonstrate skills/achievements matching the job description.
+      # If a particular job experience is not aligned with the job description, omit the "highlights" section entirely. The job title, company, location, and dates should still be included.
       - company: Company Name
-      # Titles can amended to tell the story. For example, if a formal title of an experience was Senior Engineer, but in practice, the highlights indicate they were in a leadership position, when applying to a leadership position the title could be amended to “Team Lead, Senior Engineer” and that position could be counted as management experience.
-      # If a synonym to the title is a more direct match to the job description, use the synonym. For example, if the job description is looking for a “Software Engineer” and the title is “Developer”, use “Software Engineer” as the title.
-        position: Title
+        position: Optimized job title (e.g., adjusted to reflect leadership, technical expertise, etc.)
         location: location
         start_date: YYYY-MM
-        # If no end date use "present"
         end_date: YYYY-MM
-        # do not include skills or context sections
         highlights:
-        # Resume bullet points. Each one should be rewritten to optimize for the job description and readability while remaining accurate. Only include bullet points that are relevant to the job description. Focus on impact and concrete examples. Use numbers to quantify impact when possible. Use active language that demonstrates the skills and experience that are relevant to the job description. Mention specific programming languages and technologies that the job description is looking for when possible.
-          - "resume bullet point"
-          - "resume bullet point"
+          - "Action-oriented accomplishment with measurable impact, e.g., 'Led a project that resulted in a 20% increase in efficiency.'"
+          - "Action-oriented accomplishment with measurable impact, e.g., 'Developed a system that reduced costs by 15%.'"
     education:
       - institution: institution name
         area: area
@@ -49,22 +32,19 @@ cv:
         start_date: YYYY-MM
         end_date: YYYY-MM
     volunteering:
-    # list out any relevant volunteer work. Don't include this section if there is no volunteer work that is relevant to the job.
+      # Include only if relevant to the job. Focus on roles that demonstrate transferable skills or leadership.
       - name: "[Name of organization](URL)"
         highlights:
-          - "Bullet list emphasizing any relevant experience"
-          - "Bullet list emphasizing any relevant experience"
-
+          - "Relevant volunteer task that demonstrates transferable skills or leadership."
     projects:
-    # list out any relevant projects and writing. Don't include projects that are not relevant to the job.
-      - name: '[Title](URL): context such as what it is about, who it was for'
-      - name: '[Title](URL): context such as what it is about, who it was for'
+      # Only include relevant projects. Prioritize projects that align with the job description.
+      - name: '[Project Title](URL): Brief description of the project and its relevance to the job.'
     skills:
-    # Fill out the list of programming languages I know.
-    # Is the job description looking for a specific programming language? Is the language on my skill list? If so, list it first. If no specific languages are mentioned in the job description, list the three most relevant languages from my skill list.
       - label: Languages
-        details: "comma separated list of programming languages"
-    # Are any technologies mentioned in the job description? Are they on my skill list? If so, list the technologies under details here. If no technologies are mentioned in the job description, list up to 10 relevant technologies. Do not include technologies that are not relevant to the job.
+        details: "List the most relevant programming languages based on the job description, with priority to any specific languages mentioned."
       - label: Technologies
-        details: "comma separated list of skills in the technologies category"
-
+        details: "List relevant technologies mentioned in the job description, or up to 10 relevant ones based on the job."
+    certifications:
+      # Include certifications only if they are relevant to the job.
+      - name: "Certification Name"
+        date: YYYY-MM
