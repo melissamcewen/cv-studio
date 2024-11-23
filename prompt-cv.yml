@@ -52,7 +52,7 @@ cv:
           - "resume bullet point"
           - "resume bullet point"
     education:
-      - institution: insitution name
+      - institution: institution name
         area: area
         degree: degree
         start_date: YYYY-MM
