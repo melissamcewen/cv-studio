@@ -1,0 +1,19 @@
+job:
+  title: "job title"
+  company: "company name"
+  role_responsibilities:
+  # a bullet list of the responsibilities of the job, use as many as needed
+    - "responsibility"
+    - "responsibility"
+  qualifications:
+  # a bullet list of the most important qualifications the job is looking for, use as many as needed
+    - "qualification"
+    - "qualification"
+  skills:
+  # customize this section based on the skills listed in the input job description. You can have as many categories as needed.
+    - label: category of skills
+      details: comma separated list of skills
+    - label: category of skills
+      details: comma separated list of skills
+
+

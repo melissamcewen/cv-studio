@@ -5,8 +5,8 @@
     "yaml": "^2.6.0"
   },
   "scripts": {
-    "fill-resume": "node resume-filler.js jobs/salesengineering CVs/resume-cv.yml",
-    "generate-prompt": "node generateResumePrompt.js output/output-filled-cv.yml prompt-cv.yml prompts/$npm_config_company.txt",
+    "fill-resume": "node resume-filler.js jobs/$npm_config_job CVs/resume-cv.yml",
+    "generate-prompt": "node generateResumePrompt.js output/output-filled-cv.yml jobDesc/$npm_config_company.txt prompts/$npm_config_company.txt",
     "add-experience": "node addExperience.js prompts/$npm_config_company.yml CVs/resume-cv.yml output/output-withexp-cv.yml",
     "add-design": "node concat-yml.js output/output-withexp-cv.yml designs/sb2nov.yml",
     "create-resume": "rendercv render output/output-design.yml --output-folder-name resumes/$npm_config_company",

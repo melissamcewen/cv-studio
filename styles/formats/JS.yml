@@ -1,0 +1,5 @@
+# FILE: styles/formats/JS.yml
+extends: markdown
+scope: text
+filters:
+  - '`([^`]+)`'
