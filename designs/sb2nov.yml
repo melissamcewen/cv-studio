@@ -1,4 +1,3 @@
-## Don't edit the section below, keep as-is
 design:
   theme: sb2nov
   font: Latin Modern Serif
@@ -11,7 +10,7 @@ design:
   disable_last_updated_date: false
   last_updated_date_style: Last updated in TODAY
   header_font_size: 24 pt
-  text_alignment: justified
+  text_alignment: justified-with-no-hyphenation
   seperator_between_connections: ''
   use_icons_for_connections: true
   margins:
