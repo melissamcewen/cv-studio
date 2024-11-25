@@ -1,0 +1,7 @@
+# Bullet points should not include periods
+# Bullet points should not be more than 2 sentences
+extends: existence
+message: "Don't end bullet points with periods. Bullet points != sentences."
+level: warning
+raw:
+  - '- ([^.]+)\.\n'

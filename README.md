@@ -26,3 +26,22 @@ npm run build-resume --company=company-name
 
 Interview prep
 - can you come up with 5 behavioral interview questions I should study before interviewing for this role:
+
+
+# Test cases for custom rule
+
+```
+	testCases := []string{
+		"- This is a short line",
+		"- " + "x",
+		"- " + "x" + "y",
+		"- " + "x" + "y" + "z",
+		"- " + fmt.Sprintf("%084s", "x"),  // Exactly 84 chars
+		"- " + fmt.Sprintf("%085s", "x"),  // 85 chars
+		"- " + fmt.Sprintf("%085s", "x") + " word1",  // 85 chars + 1 word
+		"- " + fmt.Sprintf("%085s", "x") + " word1 word2 word3 word4",  // 85 chars + 4 words
+		"- " + fmt.Sprintf("%085s", "x") + " word1 word2 word3 word4 word5",  // 85 chars + 5 words (shouldn't match)
+	}
+
+```
+

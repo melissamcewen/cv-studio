@@ -1,0 +1,9 @@
+# Bullet point should be EITHER less than 84 characters long OR 84 characters + 5 words
+
+# Bullet points should not include periods
+# Bullet points should not be more than 2 sentences
+extends: existence
+message: "Bullet point is too long or two short"
+level: warning
+raw:
+  - '-\s.{83}[^[:space:]]+([[:space:]][^[:space:]]+){0,4}$'

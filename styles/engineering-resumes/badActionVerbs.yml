@@ -1,0 +1,45 @@
+# Action verbs
+# Bad examples: aided, assisted, coded, collaborated, communicated, executed, exposed to, gained experience, helped, participated, programmed, ran, used, utilized, worked on
+# Don't use the verb utilize. 9/10 times that word will be attached to some disgusting Gordian knot of a sentence that says in 20 words what could be said in 10.
+# superfluous/awkward/unnecessarily complex verbs: amplified, conceptualized, crafted, elevated, employed, engaged, engineered, enhanced, ensured, fostered, headed, honed, innovated, mastered, orchestrated, perfected, pioneered, revolutionized, spearheaded, transformed
+
+extends: existence
+message: "Don't use '%s' as an action verb."
+ignorecase: true
+level: warning
+tokens:
+  - aided
+  - assisted
+  - coded
+  - collaborated
+  - communicated
+  - executed
+  - exposed to
+  - gained experience
+  - helped
+  - participated
+  - programmed
+  - ran
+  - used
+  - utilized
+  - utilize
+  - amplified
+  - conceptualized
+  - crafted
+  - elevated
+  - employed
+  - engaged
+  - engineered
+  - enhanced
+  - ensured
+  - fostered
+  - headed
+  - honed
+  - innovated
+  - mastered
+  - orchestrated
+  - perfected
+  - pioneered
+  - revolutionized
+  - spearheaded
+  - transformed

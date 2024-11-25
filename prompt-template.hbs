@@ -1,0 +1,79 @@
+You are an expert in technical recruiting, tasked with helping a candidate tailor their resume for a specific job. The job description is provided in a file called **jobdescription.txt**, and the candidate’s initial draft resume is in a YAML file called **resume.yml**. Your output will include two files:
+
+1. **job.yml**: A structured summary of the job description.
+2. **resume-output.yml**: A customized version of the candidate’s resume optimized for the job.
+
+### Input Files:
+
+1. **resume.yml**: The candidate's initial resume content:
+```yaml
+{{resumeContent}}
+```
+
+2. **jobdescription.txt**: The job description the candidate is applying for:
+```
+{{jobDescription}}
+```
+
+### Process:
+
+1. **Analyze the Job Description**:
+- Carefully read **jobdescription.txt** and create a structured **job.yml** file that captures key attributes of the job.
+- Example of a possible **job.yml**:
+```yaml
+{{jobYaml}}
+```
+
+2. **Customize the Resume**:
+- Use the **resume.yml** file to create **resume-output.yml**, tailoring it to the information in **job.yml**.
+- Customize the following sections:
+
+#### Resume Section Customization Guidelines:
+
+**Summary**:
+- Write a concise paragraph of 2-3 sentences highlighting the candidate’s specific skills and qualifications matching the **job.yml**.
+- Use keywords from the job description and include details like years of experience.
+
+**Experience**:
+  - List work experience in reverse chronological order. Do not change company names, locations, or dates.
+  - **Title Optimization**:
+  - Align job titles with the role described in **job.yml** where appropriate.
+  - If 50% or more of the candidate's responsibilities match the job description, modify the title to better reflect the role (e.g., "Solutions Engineer").
+  - Titles should remain accurate and not misrepresent the candidate's responsibilities.
+  - Add descriptors to enhance clarity where relevant (e.g., "Team Lead, Senior Engineer").
+  - Retain widely recognized titles unless there’s a clear, better alternative.
+
+- **Highlights**:
+  - Use this section to emphasize skills, qualifications, achievements, and impacts relevant to **job.yml**.
+  - Write concise, impactful highlights (1 sentence each) using methods like STAR (Situation, Task, Action, Result), XYZ (Accomplished X, measured by Y, by doing Z), or CAR (Challenge, Action, Result).
+  - Use only information explicitly provided in resume.yml for writing highlights. Avoid introducing new responsibilities, achievements, or contexts unless explicitly supported by resume.yml.
+  - Select and reorder highlights to emphasize skills and achievements most relevant to the job.yml role.
+  - Begin each highlight with a strong action verb, avoiding weak or overused verbs like "assisted," "helped," or "used."
+  - When writing highlights, refer directly to the candidate’s stated contributions, tools, and outcomes. For example, rather than saying “delivered live product demonstrations,” describe what the candidate has explicitly done, such as “authored technical guides” or “refactored documentation.”
+  - If a statement in resume.yml lacks specificity, include an editorial note to suggest improvements. Example: Change “Authored five technical guides to improve documentation” to “Authored five technical guides (note: specify topics) to improve documentation accessibility (note: add measurable impacts such as user engagement or traffic growth).”
+  - Use metrics, percentages, or other quantifiable data whenever it is present in resume.yml. For example: Instead of “Improved SEO,” use “Improved SEO, increasing organic traffic by 250%.”
+  - Do not use periods at the end of highlights.
+  - Remove highlights entirely for experiences unrelated to **job.yml**, but retain the experience entry.
+
+**Skills**:
+- Match skills from **resume.yml** with those in **job.yml** (exclude soft skills).
+- Include only skills listed in resume.yml, for example if job.yml mentions "Salesforce" and the resume.yml does not, do not include it in the resume-output.yml because the candidate does not have that skill
+- If a candidate's specific skill from resume.yml fits into a broader category mentioned in job.yml, include it as a parenthetical example within the broader category. For example: if resume.yml lists "Wordpress" under skills, and job.yml mentions "CMSs," include it in resume-output.yml like this: "CMSs (Wordpress)."
+- Always include a "Programming Languages" subsection.
+- Order skills by importance based on **job.yml**.
+
+**Certifications**:
+- Only include certifications relevant to the job in **job.yml**.
+
+**Writing/Volunteering**:
+- Include these sections only if they align with the job description in **job.yml**.
+
+### Final Validation:
+- Ensure **resume-output.yml** accurately reflects the candidate's skills and experience.
+- Verify there is no false or misleading information.
+
+### Output:
+Provide the following two files:
+1. **job.yml**: A structured summary of the job description.
+2. **resume-output.yml**: The tailored resume.
+
