@@ -1,7 +1,7 @@
 design:
   theme: sb2nov
-  font: Latin Modern Serif
-  font_size: 10pt
+  font: Source Sans 3
+  font_size: 12pt
   page_size: letterpaper
   color: '#004f90'
   disable_external_link_icons: false
@@ -70,4 +70,3 @@ locale_catalog:
   years: years
   present: present
   to: to
-
