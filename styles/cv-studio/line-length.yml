@@ -1,7 +1,7 @@
 
 extends: existence
 message: "Bullet point is too long or two short"
-level: error
+level: warning
 scope: raw
 raw:
    - '(?m)^\s*- .{99}(?: \S+){0,4}$'
