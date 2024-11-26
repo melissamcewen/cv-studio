@@ -4,4 +4,4 @@ message: "Bullet point is too long or two short"
 level: warning
 scope: raw
 raw:
-   - '(?m)^\s*- .{99}(?: \S+){0,4}$'
+   - '(?m)^\s*-\s("||).{100,107}(?: \S+){0,4}$'
