@@ -7,4 +7,5 @@ tokens:
   - simple
   - should
   - be
+  - like
 
