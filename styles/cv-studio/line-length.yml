@@ -1,7 +1,7 @@
 
 extends: existence
-message: "Bullet point is too long or two short"
+message: "Bullet point overflows the first line and isn't long enough to fill a second"
 level: warning
 scope: raw
 raw:
-   - '(?m)^\s*-\s("||).{85,95}(?: \S+){0,4}$'
+   - '(?m)^\s*-\s("||)(?!.*\]\([^)]*\)).{85,95}(?: \S+){0,4}$'

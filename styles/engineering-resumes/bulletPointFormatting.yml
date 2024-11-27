@@ -1,8 +1,7 @@
-# Bullet points should not include periods
-# Bullet points should not be more than 2 sentences
+# Bullet points should not end with periods.
 extends: existence
 message: "Don't end bullet points with periods. Bullet points != sentences."
 level: warning
 scope: raw
 raw:
-  - '(?m)-\s.*\.\W*$'
+  - '(?m)^[[:blank:]]*-[[:blank:]].*\.([[:blank:]]*\n|"[[:blank:]]*\n)'
