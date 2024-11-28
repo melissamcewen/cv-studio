@@ -3,4 +3,4 @@ message: "Bullet point likely overflows the third line"
 level: warning
 scope: raw
 raw:
-   - '(?m)^\s*-\s("||)(?!.*\]\([^)"]*\)).{173,}($|\")'
+   - '(?m)^\s*-\s("||)(?!.*\]\([^)"]*\)).{188,}($|\")'

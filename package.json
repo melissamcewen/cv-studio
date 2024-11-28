@@ -12,7 +12,7 @@
     "generate-prompt-analysis": "node generateResumePrompt.js prompts/$npm_config_company.yml jobDesc/$npm_config_company.yml prompt-template-analysis.hbs prompts/analysis/$npm_config_company.txt",
     "add-experience": "node addExperience.js prompts/$npm_config_company.yml CVs/resume-cv.yml output/output-withexp-cv.yml",
     "add-design": "node concat-yml.js output/output-withexp-cv.yml designs/sb2nov.yml",
-    "add-design-manual": "node concat-yml.js manual/$npm_config_company.yml designs/sb2nov.yml",
+    "add-design-manual": "node concat-yml.js manual/$npm_config_company.yml designs/engineering.yml",
     "create-resume": "rendercv render output/output-design.yml --output-folder-name resumes/$npm_config_company",
     "build-resume": "npm run fill-resume && npm run generate-prompt && npm run add-experience && npm run add-design && npm run create-resume"
   }
