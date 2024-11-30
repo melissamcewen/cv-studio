@@ -33,3 +33,12 @@ Interview prep
 - can you tell me the ideal resume summary (2-3 sentences) that a recruiter is looking for when filling this job
 
 
+# Eval process
+
+- information is accurate (fail if contains false information)
+- highlight includes specific example
+- highlight is quantifiable
+- skills match job description
+- use job.yml as checklist
+
+

@@ -1,6 +1,10 @@
 job:
   title: "job title"
   company: "company name"
+  keywords:
+  # a list of keywords that are important for the job, use as many as needed
+    - "keyword"
+    - "keyword"
   role_responsibilities:
   # a bullet list of the responsibilities of the job, use as many as needed
     - "responsibility"
