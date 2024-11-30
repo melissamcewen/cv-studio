@@ -22,10 +22,10 @@ cv:
         location: location
         start_date: YYYY-MM
         end_date: YYYY-MM
+        ## Highlights are resume bullet points
         highlights:
-          - "Action-oriented accomplishment with measurable impact, e.g., 'Led a project that resulted in a 20% increase in efficiency.'"
-          - "Action-oriented accomplishment with measurable impact, e.g., 'Developed a system that reduced costs by 15%.'"
-    education:
+          - "Accomplishment that aligns with the job description, with quantifiable results and specfic details if possible."
+          - "Accomplishment that aligns with the job description, with quantifiable results and specfic details if possible."
       - institution: institution name
         area: area
         degree: degree

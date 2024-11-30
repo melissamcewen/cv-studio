@@ -35,15 +35,17 @@ function loadTemplate(templatePath) {
 }
 
 // Main function
-function generateResumeTxt(resumePath, jobDescriptionPath, templatePath, outputPath) {
+function generateResumeTxt(resumePath, resumeymlPath, jobDescriptionPath, templatePath, outputPath) {
   const resumeContent = readYAML(resumePath);
   const jobDescription = fs.readFileSync(jobDescriptionPath, 'utf8');
+  const resumeYaml = readYAML(resumeymlPath);
   const jobYaml = readYAML('job-cv.yml');
 
   const template = loadTemplate(templatePath);
 
   const data = {
     resumeContent,
+    resumeYaml,
     jobDescription,
     jobYaml
   };
@@ -56,15 +58,16 @@ function generateResumeTxt(resumePath, jobDescriptionPath, templatePath, outputP
 // CLI arguments
 const args = process.argv.slice(2);
 if (args.length < 4) {
-  console.error('Usage: node generateResumeTxt.js <resume.yml> <jobdescription.txt> <template.hbs> <output.txt>');
+  console.error('Usage: node generateResumeTxt.js <resume.yml> <prompt-cv.yml> <jobdescription.txt> <template.hbs> <output.txt>');
   process.exit(1);
 }
 
-const [resumePath, jobDescriptionPath, templatePath, outputPath] = args;
+const [resumePath, resumeymlPath, jobDescriptionPath, templatePath, outputPath] = args;
 
 // Run the script
 generateResumeTxt(
   path.resolve(resumePath),
+  path.resolve(resumeymlPath),
   path.resolve(jobDescriptionPath),
   path.resolve(templatePath),
   path.resolve(outputPath)

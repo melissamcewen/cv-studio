@@ -1,0 +1,10 @@
+Inputs, candidates resume.yml, job description in job.yml, resume-bullet-points.yml
+
+For each job.role_responsibilities in job.yml, go through resume-bullet-points.yml and find examples of the candidate accomplishing similar responsibilities. Use the example to write a resume bullet point under the respective resume.yml experience highlights section with the same key.
+
+For each job.qualifications in job.yml, go through resume-bullet-points.yml and find examples demonstrating that the candidate has the qualification.
+
+For each skill category in job.skills, go through the comma separated list in details
+
+1. If the skill is a soft skill, see if there are any examples in resume-bullet-points.yml that demonstrate the skill, author a new resume bullet point or edit an existing one to incorporate the skill
+2. If the skill is a technical skill and the candidate mentions as skill or a skill that is related, add it to the skills section in resume-output.yml
