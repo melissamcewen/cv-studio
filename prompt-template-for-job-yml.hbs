@@ -1,18 +1,19 @@
 {{!--
 model: gpt-4o
-prompt: v 4.01
-- information is accurate (fail if contains false information): pass
-- % highlight includes specific example: fail
-- % highlight is quantifiable: pass
-- skills match both job description AND resume: fail
-- keywords: fail
-- education is included: true
-- experience is in reverse chronological order: pass
+prompt: v 4.03
+- information is accurate (fail if contains false information):
+- % highlight includes specific example:
+- % highlight is quantifiable:
+- skills match both job description AND resume:
+- keywords:
+- education is included:
+- experience is in reverse chronological order:
 
 other issues
 - projects irrelevant
 - soft skills still on skills
-- irrevelant skills 
+- irrevelant skills
+- doesn't include important context
 
 --}}
 
@@ -24,13 +25,16 @@ The candidate’s initial draft resume is in a YAML file called **resume.yml**. 
 
 ## Input Files:
 
-1. **resume.yml**: The candidate's initial resume content:
+1. resume.yml: The candidate's initial resume content:
 ```yaml
 {{resumeContent}}
 ```
 
-2. The job.yml file you created in the first prompt
+2. job.yml:
 
+```yaml
+{{jobDescription}}
+```
 
 ## Customize the Resume
 - Use the **resume.yml** file to create **resume-output.yml**, tailoring it to the information in **job.yml**.
@@ -39,19 +43,22 @@ The candidate’s initial draft resume is in a YAML file called **resume.yml**. 
 #### Certifications
 - Only include certifications relevant to the job in **job.yml**.
 #### Experience
-- Highlights in experience should be specific and quantifiable.
+- Highlights in experience should be specific (include details, do not be vague) and quantifiable.
+- Focus highlights on skills, achievements, and outcomes that explicitly align with the key responsibilities, skills, and values described in job.yml.
+- Tie quantifiable metrics to the specific tools, technologies, or practices mentioned in job.yml.
 - Omit any highlights that are not relevant to the job in **job.yml**.
 - Do not include periods at the end of highlights.
+- Directly integrate keywords from job.yml into the highlights wherever possible, while ensuring the phrasing remains natural and aligned with the candidate's achievements.
+
 
 #### Writing/Volunteering/Projects (optional)
 - Include these sections only if they align with the job description in **job.yml**.
 
 #### Skills
 - Do not include soft skills, only technical skills.
-
-### Validation:
-- Ensure **resume-output.yml** accurately reflects the candidate's skills and experience.
-- Verify there is no false or misleading information.
+- Include only skills mentioned in the skills or keywords sections of Job.yml
+- Only include skills explicitly mentioned in job.yml. Exclude any that are not found there, even if they appear in resume.yml.
+- Ensure that each listed skill has a clear connection to the responsibilities, technologies, or tools highlighted in job.yml.
 
 ### Output:
 
