@@ -1,17 +1,19 @@
-Inputs, candidates resume.yml, job description in job.yml, resume-bullet-points.yml
 
-For each item in resume-bullet-points.yml
-If it demonstrates a skill or qualification from job.checklist in job.yml, use it to author a resume bullet point that:
 
-  - mirrors the language in the job.checklist item
-  - includes items from job.keywords whenever possible
-  - is specific and quantifiable
+# For each item in resume-bullet-points.yml
+## If it demonstrates a skill or qualification from job.checklist in job.yml
+
+use it to author a cohesive resume bullet point that:
+
+  - Echoes the phrasing and structure of the corresponding checklist item in job.yml, adapting to fit the candidate's experience
+  - Include specific, quantifiable achievements or methods from the resume-bullet-points.yml to demonstrate alignment with the checklist items
+  - Incorporates relevant keywords from job.yml wherever appropriate
+  - is only one sentence and does not end with a period
+  - does not contain the words "I" or "my"
+
+## Otherwise exclude it
+
 
 Add it to the resume-output.yml under the respective experience section with the same key.
 
 
-
-For each skill category in job.skills, go through the comma separated list in details
-
-1. If the skill is a soft skill, see if there are any examples in resume-bullet-points.yml that demonstrate the skill, author a new resume bullet point or edit an existing one to incorporate the skill
-2. If the skill is a technical skill and the candidate mentions as skill or a skill that is related, add it to the skills section in resume-output.yml
