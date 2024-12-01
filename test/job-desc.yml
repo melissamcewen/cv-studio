@@ -1,0 +1,48 @@
+job:
+  title: "Backend Software Engineer"
+  company: "Unknown" # Update with company name if available
+  keywords:
+    - "Backend Software Engineer"
+    - "Python"
+    - "Java"
+    - "Node.js"
+    - "RESTful APIs"
+    - "data models"
+    - "database schemas"
+    - "MySQL"
+    - "PostgreSQL"
+    - "MongoDB"
+    - "AWS"
+    - "GCP"
+    - "Azure"
+    - "Git"
+    - "Docker"
+    - "Kubernetes"
+    - "microservices"
+    - "serverless computing"
+    - "troubleshooting"
+    - "scalable systems"
+    - "secure solutions"
+  checklist:
+    - "Design, develop, and maintain server-side applications using languages like Python, Java, or Node.js"
+    - "Build and optimize RESTful APIs to power frontend applications"
+    - "Develop and implement robust data models and database schemas"
+    - "Collaborate with the frontend team to ensure seamless integration of backend services"
+    - "Write clean, well-documented, and efficient code"
+    - "Troubleshoot and resolve technical issues"
+    - "Stay up-to-date with the latest technologies and industry trends"
+    - "Strong proficiency in at least one backend programming language (Python, Java, Node.js, etc.)"
+    - "Experience with relational and NoSQL databases (MySQL, PostgreSQL, MongoDB, etc.)"
+    - "Knowledge of RESTful API design and development"
+    - "Understanding of cloud platforms (AWS, GCP, Azure)"
+    - "Experience with version control systems (Git)"
+    - "Strong problem-solving and analytical skills"
+    - "Excellent communication and teamwork abilities"
+    - "Experience with containerization technologies (Docker, Kubernetes)"
+    - "Knowledge of microservices architecture"
+    - "Experience with serverless computing platforms"
+  skills:
+    - label: languages
+      details: Python, Java, Node.js
+    - label: technologies
+      details: MySQL, PostgreSQL, MongoDB, RESTful APIs, AWS, GCP, Azure, Docker, Kubernetes, serverless computing, Git

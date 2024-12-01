@@ -1,0 +1,12 @@
+1. Given the following list of a candidate's experience, can you find any instances that demonstrate that the candidate could "X"
+
+Output those examples
+
+2. Can you reword the examples as resume bullet points to demonstrate that the candidate has the relevant skills/qualifications
+
+Output the reworded bullet points
+
+3. Can you make those resume bullet points specific, impactful, and quantified?
+
+Output the reworded bullet points
+
