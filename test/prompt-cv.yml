@@ -10,41 +10,37 @@ cv:
       username: github username
   sections:
     summary:
-      # Craft a concise 2-3 sentence summary that directly aligns with the job description, emphasizing the candidate's most relevant skills and achievements.
-      # Prioritize key strengths and measurable outcomes. Include relevant job description keywords.
+      # Craft a concise 2-3 sentence summary that directly aligns with qualifications in job.yml, emphasizing the candidate's most relevant skills and achievements.
+      # Prioritize key strengths and measurable outcomes. Include relevant keywords from job.yml
       - "summary goes here"
     experience:
       # Include all job experiences listed, but omit the highlights for any positions that are not directly relevant to the job description.
-      # For positions that are relevant, include the job title, company, location, dates, and highlights that demonstrate skills/achievements matching the job description.
       # If a particular job experience is not aligned with the job description, omit the "highlights" section entirely. The job title, company, location, and dates should still be included.
       - company: Company Name
         position: Optimized job title (e.g., adjusted to reflect leadership, technical expertise, etc.)
         location: location
         start_date: YYYY-MM
         end_date: YYYY-MM
-        ## Highlights are resume bullet points
+        # Highlights are detailed well-written resume bullet points
+        # add up to 5, with the most relevant at the top
+        # Emphasize experience that aligns with the job.role_responsibilities
+        # Use the highlight to say specifically what the candidate accomplished, how they did it, and the measurable impact
+        # Avoid vagueness, always specify tools, languages, technologies, companies, clients, etc.
+        # Begin each highlight with a strong action verb, ideally one used in job.yml job.role_responsibilities
+        # Use numbers to quantify achievements, e.g., "increased sales by 20%"
+        # 1 sentence per bullet point, do not end with period
+        # ideally each bullet point should fill exactly two lines
         highlights:
-          - "Accomplishment that aligns with the job description, with quantifiable results and specfic details if possible."
-          - "Accomplishment that aligns with the job description, with quantifiable results and specfic details if possible."
+          - "resume bullet point"
+          - "resume bullet point"
       - institution: institution name
         area: area
         degree: degree
         start_date: YYYY-MM
         end_date: YYYY-MM
-    volunteering:
-      # Include only if relevant to the job. Focus on roles that demonstrate transferable skills or leadership.
-      - name: "[Name of organization](URL)"
-        highlights:
-          - "Relevant volunteer task that demonstrates transferable skills or leadership."
-    projects:
-      # Only include relevant projects. Prioritize projects that align with the job description.
-      - name: '[Project Title](URL): Brief description of the project and its relevance to the job.'
     skills:
       - label: Languages
         details: "List the most relevant programming languages based on the job description, with priority to any specific languages mentioned."
       - label: Technologies
-        details: "List relevant technologies mentioned in the job description, or up to 10 relevant ones based on the job."
-    certifications:
-      # Include certifications only if they are relevant to the job.
-      - name: "Certification Name"
-        date: YYYY-MM
+        # list only specific technologies mentioned in job.yml
+        details: "List relevant technologies mentioned in job.yml that the candidate has experience with"

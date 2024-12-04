@@ -1,12 +1,12 @@
 const fs = require('fs-extra');
 const path = require('path');
-const yaml = require('yaml');
+const yaml = require('js-yaml'); // Use js-yaml instead of yaml
 
 async function updateResumeWithHighlights(directory, yamlFile) {
   try {
     // Load and parse the YAML file
     const yamlContent = await fs.readFile(yamlFile, 'utf8');
-    const data = yaml.parse(yamlContent);
+    const data = yaml.load(yamlContent); // Use js-yaml's load method
 
     // Check if "experience" section exists
     if (!data.cv || !data.cv.sections || !data.cv.sections.experience) {
@@ -39,12 +39,19 @@ async function updateResumeWithHighlights(directory, yamlFile) {
       }
     }
 
-    // Convert the updated data back to YAML
-    const outputYaml = yaml.stringify(data);
+    // Convert the updated data back to YAML with the specified options
+    const outputYaml = yaml.dump(data, {
+      noRefs: true,         // Disable references to avoid unnecessary data duplication
+      indent: 2,            // Set indentation to 2 spaces for readability
+      lineWidth: 80,        // Limit line width to prevent overly long lines
+      quotingType: '"',     // Force double quotes around all strings
+      forceQuotes: true,    // Force quotes on all values
+      flowLevel: -1         // Ensure block-style YAML formatting
+    });
 
-    // Write the result to output-cv.yml
+    // Write the result to output-filled-cv
     await fs.writeFile('output/output-filled-cv.yml', outputYaml, 'utf8');
-    console.log('Updated YAML saved to output-cv.yml');
+    console.log('Updated YAML saved output-filled-cv.yml');
 
   } catch (error) {
     console.error('Error:', error.message);

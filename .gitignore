@@ -10,6 +10,8 @@ styles/config/vocabularies/personal
 jobDesc
 manual
 cv-data
+coverletters
+*.pyc
 
 # Logs
 logs

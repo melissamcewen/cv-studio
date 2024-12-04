@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
+const yaml = require('js-yaml');
 
 // Function to read YAML files
 function readYAML(filePath) {
@@ -35,11 +36,11 @@ function loadTemplate(templatePath) {
 }
 
 // Main function
-function generateResumeTxt(resumePath, resumeymlPath, jobDescriptionPath, templatePath, outputPath) {
+function generateResumeTxt(resumePath, resumeymlPath, jobDescriptionPath, jobymlPath,templatePath, outputPath) {
   const resumeContent = readYAML(resumePath);
   const jobDescription = fs.readFileSync(jobDescriptionPath, 'utf8');
   const resumeYaml = readYAML(resumeymlPath);
-  const jobYaml = readYAML('job-cv.yml');
+  const jobYaml = readYAML(jobymlPath);
 
   const template = loadTemplate(templatePath);
 
@@ -62,13 +63,14 @@ if (args.length < 4) {
   process.exit(1);
 }
 
-const [resumePath, resumeymlPath, jobDescriptionPath, templatePath, outputPath] = args;
+const [resumePath, resumeymlPath, jobDescriptionPath, jobymlPath, templatePath, outputPath] = args;
 
 // Run the script
 generateResumeTxt(
   path.resolve(resumePath),
   path.resolve(resumeymlPath),
   path.resolve(jobDescriptionPath),
+  path.resolve(jobymlPath),
   path.resolve(templatePath),
   path.resolve(outputPath)
 );

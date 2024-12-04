@@ -2,18 +2,20 @@ job:
   title: "job title"
   company: "company name"
   keywords:
-  # a list of keywords that are likely used to filter resumes in the applicant tracking system
+  # a list of keywords that the ATS might use to filter candidates, use as many as needed
     - "keyword"
     - "keyword"
-  checklist:
-  # a bullet list of both the responsibilities and qualifications recruiter is looking for, use as many as needed
-    - "bullet point"
-    - "bullet point"
+  role_responsibilities:
+  # a bullet list of the responsibilities of the job, use as many as needed
+    - "responsibility"
+    - "responsibility"
+  qualifications:
+  # a bullet list of the most important qualifications the job is looking for, use as many as needed
+    - "qualification"
+    - "qualification"
   skills:
-  # customize this section based on the specific languages and technologies listed in the input job description.
+  # customize this section based on the skills listed in the input job description. You can have as many categories as needed.
     - label: languages
-      details: comma separated list of languages relevant to the job
-    - label: technologies
-      details: comma separated list of technologies relevant to the job
-
-
+      details: comma separated list of languages
+    - label: category of skills
+      details: comma separated list of technologies

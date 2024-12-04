@@ -2,19 +2,17 @@
   "devDependencies": {
     "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
-    "js-yaml": "^4.1.0",
-    "yaml": "^2.6.0"
+    "js-yaml": "^4.1.0"
   },
   "scripts": {
-    "fill-resume": "node resume-filler.js jobs/$npm_config_job CVs/resume-cv.yml",
-    "fill-resume-bullets": " node resume-filler-bullet-version.js CVs/resume-cv.yml cv-data/bullet-points.yml output/output-bulletv.yml",
-    "generate-prompt": "node generateResumePrompt.js output/output-bulletv.yml jobDesc/$npm_config_company.yml prompt-template-for-job-yml.hbs prompts/$npm_config_company.txt",
-    "generate-prompt-job": "node generateResumePrompt.js output/output-filled-cv.yml prompt-cv.yml jobDesc/$npm_config_company.txt prompt-template-job-yml.hbs prompts/job-$npm_config_company.txt",
-    "generate-prompt-analysis": "node generateResumePrompt.js prompts/$npm_config_company.yml jobDesc/$npm_config_company.yml prompt-template-analysis.hbs prompts/analysis/$npm_config_company.txt",
-    "add-experience": "node addExperience.js prompts/$npm_config_company.yml CVs/resume-cv.yml output/output-withexp-cv.yml",
-    "add-design": "node concat-yml.js output/output-withexp-cv.yml designs/sb2nov.yml",
-    "add-design-manual": "node concat-yml.js manual/$npm_config_company.yml designs/engineering.yml",
-    "create-resume": "rendercv render output/output-design.yml --output-folder-name resumes/$npm_config_company",
-    "build-resume": "npm run fill-resume && npm run generate-prompt && npm run add-experience && npm run add-design && npm run create-resume"
+    "fill-resume": "node src/resume-filler.js jobs/$npm_config_job CVs/resume-cv.yml",
+    "fill-resume-bullets": " node src/resume-filler-bullet-version.js CVs/resume-cv.yml cv-data/bullet-points.yml output/output-bulletv.yml",
+    "generate-prompt": "node src/generateResumePrompt.js output/output-bulletv.yml test/prompt-cv.yml jobDesc/$npm_config_company.yml jobDesc/$npm_config_company.yml templates/prompt-template-for-job-yml.hbs prompts/$npm_config_company.txt",
+    "generate-prompt-job": "node src/generateResumePrompt.js output/output-filled-cv.yml test/prompt-cv.yml jobDesc/$npm_config_company.txt test/job-cv.yml templates/prompt-template-job-yml.hbs prompts/job-$npm_config_company.txt",
+    "generate-prompt-analysis": "node src/generateResumePrompt.js prompts/$npm_config_company.yml jobDesc/$npm_config_company.yml templates/prompt-template-analysis.hbs prompts/analysis/$npm_config_company.txt",
+    "add-experience": "node src/addExperience.js prompts/$npm_config_company.yml CVs/resume-cv.yml output/output-withexp-cv.yml",
+    "add-design": "node src/concat-yml.js prompts/$npm_config_company.yml  designs/engineering.yml",
+    "add-design-manual": "node src/concat-yml.js manual/$npm_config_company.yml designs/engineering.yml",
+    "create-resume": "rendercv render output/output-design.yml --output-folder-name resumes/$npm_config_company"
   }
 }

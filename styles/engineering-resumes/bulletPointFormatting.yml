@@ -4,4 +4,5 @@ message: "Don't end bullet points with periods. Bullet points != sentences."
 level: warning
 scope: raw
 raw:
-  - '(?m)^[[:blank:]]*-[[:blank:]].*\.([[:blank:]]*\n|"[[:blank:]]*\n)'
+  - '\.\s*$'
+  - '\."'
